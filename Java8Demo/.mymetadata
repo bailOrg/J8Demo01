@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Java8Demo"
+  id="myeclipse.1448518616789"
+  context-root="/Java8Demo"
+  j2ee-spec="6.0"
+  archive="Java8Demo.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
