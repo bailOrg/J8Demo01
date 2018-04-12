@@ -21,7 +21,4 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>java7Demo</module>
-    </modules>
 </project>
