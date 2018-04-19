@@ -1,5 +1,10 @@
 package com.fight.team;
 
+import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
 
@@ -9,9 +14,24 @@ import java.util.concurrent.CompletableFuture;
  */
 public class AssertDemo{
     public static void main(String[] args) throws Exception{
-        /*List<Integer> intList = Arrays.asList();
-        Optional<Integer> op = intList.stream().min(Comparator.comparingInt(i->i));
-        System.out.println(op.orElseGet(() -> new Integer(-1)));*/
+        List<Integer> intList = Arrays.asList(11,22,21);
+        /**
+         * min(param)
+         * @param Comparator接口,这个接口形如 (x,y) -> x.compareTo(y),返回-1,0,1
+         * @return 返回最小值Optional对象
+         *
+         * comparingInt()
+         * @param ToIntFunction接口,这个接口形如 (x) -> parseIntFunc(x),返回int类型的值
+         * @return Comparator对象
+         */
+        Optional<Integer> op = intList.stream().min(Comparator.comparingInt(i->i.intValue()));
+        /**
+         * orElseGet
+         * @param Supplier接口,这个接口形如 () -> new Object(),返回一个造出来的对象
+         * @return 返回Optional的泛型对象
+         */
+        System.out.println(op.orElseGet(() -> new Integer(-1)));
+
 
         /*Set<Integer> numbers = new HashSet<>(Arrays.asList(4, 32, 2, 1));
         List<Integer> sameOrder = numbers.stream()
