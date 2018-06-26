@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * @author bail
- * @time 2018/3/28.18:02
+ * @date 2018/3/28
  */
 public class HashMapDemo {
     public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class HashMapDemo {
         settings.put("id","1001");
         settings.put("height","175cm");
         settings.put("weight","70kg");
+        settings.put("age","18");
 
         System.out.println(settings.get("weight"));
 
