@@ -18,6 +18,7 @@ public class HashMapDemo {
         settings.put("height","175cm");
         settings.put("weight","70kg");
 
+        System.out.println(settings.get("weight"));
 
     }
 }
