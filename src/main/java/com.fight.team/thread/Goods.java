@@ -1,9 +1,13 @@
 package com.fight.team.thread;
 
 public class Goods {
-	// 商品库存
+	/**
+	 * 商品库存
+	 */
 	private int stock = 0;
-	// 库存锁
+	/**
+	 * 库存锁
+	 */
 	private Object lock = new Object();
 
 	public static void main(String[] args) throws Exception{
