@@ -1,4 +1,4 @@
-package com.fight.team.thread;
+package com.fight.team.thread.produce_consume;
 
 import java.util.Random;
 
@@ -36,6 +36,7 @@ public class SubStockTask implements Runnable{
 				Thread.sleep(1000*new Random().nextInt(5)+1);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
+				return ;
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-package com.fight.team.thread;
+package com.fight.team.thread.produce_consume;
 
 public class Goods {
 	/**
@@ -10,7 +10,7 @@ public class Goods {
 	 */
 	private Object lock = new Object();
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) {
 		final Goods goods = new Goods();
 		// 模拟购买商品的用户
 		new Thread(new SubStockTask("柏亮",goods)).start();
