@@ -1,0 +1,117 @@
+Classfile /D:/Workspace/IdeaProjects/myself/J8Demo01/target/classes/com/fight/team/thread/synchronize/SynchronizedTest.class
+  Last modified 2019-5-15; size 645 bytes
+  MD5 checksum c838913854767c188bc7f0e92c8e742c
+  Compiled from "SynchronizedTest.java"
+public class com.fight.team.thread.synchronize.SynchronizedTest
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#20         // java/lang/Object."<init>":()V
+   #2 = Class              #21            // com/fight/team/thread/synchronize/SynchronizedTest
+   #3 = Class              #22            // java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               LocalVariableTable
+   #9 = Utf8               this
+  #10 = Utf8               Lcom/fight/team/thread/synchronize/SynchronizedTest;
+  #11 = Utf8               synMethod0
+  #12 = Utf8               StackMapTable
+  #13 = Class              #21            // com/fight/team/thread/synchronize/SynchronizedTest
+  #14 = Class              #22            // java/lang/Object
+  #15 = Class              #23            // java/lang/Throwable
+  #16 = Utf8               synMethod1
+  #17 = Utf8               synMethod2
+  #18 = Utf8               SourceFile
+  #19 = Utf8               SynchronizedTest.java
+  #20 = NameAndType        #4:#5          // "<init>":()V
+  #21 = Utf8               com/fight/team/thread/synchronize/SynchronizedTest
+  #22 = Utf8               java/lang/Object
+  #23 = Utf8               java/lang/Throwable
+{
+  public com.fight.team.thread.synchronize.SynchronizedTest();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 9: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/fight/team/thread/synchronize/SynchronizedTest;
+
+  public void synMethod0();
+    //对方法参数和返回值进行描述
+    descriptor: ()V
+    //访问权限标识
+    flags: ACC_PUBLIC
+    //方法编译后的字节码指令
+    Code:
+      stack=2, locals=3, args_size=1
+         0: aload_0
+         1: dup
+         2: astore_1
+         //同步代码块开始
+         3: monitorenter
+         4: aload_1
+         //同步代码块结束
+         5: monitorexit
+         6: goto          14
+         9: astore_2
+        10: aload_1
+        11: monitorexit
+        12: aload_2
+        13: athrow
+        14: return
+      //列出方法中抛出的受检异常
+      Exception table:
+         //from to 两列表示指令的行; target 出现异常后跳转的行号; type 异常类型
+         from    to  target type
+             4     6     9   any
+             9    12     9   any
+      //源码与字节码指令的对应关系
+      LineNumberTable:
+        line 11: 0
+        line 12: 4
+        line 13: 14
+      //局部变量表
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lcom/fight/team/thread/synchronize/SynchronizedTest;
+      //栈图,方便JVM进行类型推导和验证
+      StackMapTable: number_of_entries = 2
+        frame_type = 255 /* full_frame */
+          offset_delta = 9
+          locals = [ class com/fight/team/thread/synchronize/SynchronizedTest, class java/lang/Object ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 250 /* chop */
+          offset_delta = 4
+
+  public synchronized void synMethod1();
+    descriptor: ()V
+    //同步方法,使用ACC_SYNCHRONIZED标识
+    flags: ACC_PUBLIC, ACC_SYNCHRONIZED
+    Code:
+      stack=0, locals=1, args_size=1
+         0: return
+      LineNumberTable:
+        line 16: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lcom/fight/team/thread/synchronize/SynchronizedTest;
+
+  public static synchronized void synMethod2();
+    descriptor: ()V
+    flags: ACC_PUBLIC, ACC_STATIC, ACC_SYNCHRONIZED
+    Code:
+      stack=0, locals=0, args_size=0
+         0: return
+      LineNumberTable:
+        line 19: 0
+}
+SourceFile: "SynchronizedTest.java"
